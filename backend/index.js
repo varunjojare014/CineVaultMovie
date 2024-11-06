@@ -17,13 +17,16 @@ const URI = process.env.MongoDBURI;
 
 // MongoDB-Connectivity-Code
 try {
-	mongoose.connect(URI, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	});
-	console.log("Connected to mongoDB");
+  mongoose.connect(
+    URI
+    // 	, {
+    // 	useNewUrlParser: true,
+    // 	useUnifiedTopology: true,
+    // }
+  );
+  console.log("Connected to mongoDB");
 } catch (error) {
-	console.log("Error Aala: ", error);
+  console.log("Error Aala: ", error);
 }
 
 // defining routes
@@ -31,5 +34,5 @@ app.use("/movie", movieRoute);
 app.use("/user", userRoute);
 
 app.listen(PORT, () => {
-	console.log(`Server is listening on port ${PORT}`);
+  console.log(`Server is listening on port ${PORT}`);
 });
