@@ -56,12 +56,10 @@ function Navbar() {
 
 	return (
 		<div
-			className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-40 ${
-				sticky
-					? "sticky-navbar shadow-md bg-base-200 duration-0 transition-all ease-in-out"
-					: ""
-			}`}>
-			<div className='navbar'>
+   className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-40 ${
+      sticky ? "sticky-navbar shadow-md duration-0 transition-all ease-in-out" : ""
+   } ${theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-black"}`}>
+			<div className='navbar bg-base-200 dark:bg-gray-800 dark:text-white'>
 				<div className='navbar-start'>
 					<div className='dropdown'>
 						<div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
@@ -107,8 +105,9 @@ function Navbar() {
 							</svg>
 						</label>
 					</div>
-					<div className='flex items-center gap-2'>
-						{/* Sun and Moon Icons */}
+					
+					{/* <div className='flex items-center gap-2'>
+						{ Sun and Moon Icons }
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							width='20'
@@ -122,7 +121,7 @@ function Navbar() {
 							<circle cx='12' cy='12' r='5' />
 							<path d='M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4' />
 						</svg>
-						{/* Theme Toggle Slider */}
+						{ Theme Toggle Slider }
 						<input
 							type='checkbox'
 							className='toggle toggle-lg'
@@ -142,8 +141,8 @@ function Navbar() {
 							strokeLinejoin='round'>
 							<path d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'></path>
 						</svg>
-					</div>
-
+					</div> */}
+					
 					{authUser ? (
 						<Logout />
 					) : (
