@@ -70,7 +70,7 @@ function Freemovie() {
 				</div>
 
 				<div>
-					<Slider {...settings}>
+					<Slider {...settings} >
 						{movie.map((item) => (
 							<Cards item={item} key={item.id} />
 						))}

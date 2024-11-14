@@ -55,10 +55,14 @@ function Navbar() {
 	);
 
 	return (
+<<<<<<< HEAD
 		<div
    className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-40 ${
       sticky ? "sticky-navbar shadow-md duration-0 transition-all ease-in-out" : ""
    } ${theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-black"}`}>
+=======
+		<div>
+>>>>>>> 5b714b4f3651a2360c5cb544d6e278e16f6835cc
 			<div className='navbar bg-base-200 dark:bg-gray-800 dark:text-white'>
 				<div className='navbar-start'>
 					<div className='dropdown'>
@@ -83,7 +87,7 @@ function Navbar() {
 							{navItems}
 						</ul>
 					</div>
-					<a className='text-2xl font-bold cursor-pointer'>CineVault</a>
+					<a className='ml-5 text-2xl font-bold cursor-pointer'>CineVault</a>
 				</div>
 				<div className='navbar-end space-x-3'>
 					<div className='navbar-center hidden lg:flex'>
